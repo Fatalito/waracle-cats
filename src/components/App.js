@@ -1,17 +1,21 @@
 import React from "react";
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import Home from "./Home";
+import Upload from "./Upload";
+import NavBar from "./NavBar";
+import ListingContainer from "./ListingContainer";
 
 function App() {
   return (
     <Router>
-      <div>
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      <NavBar />
+      <Switch>
+        <Route path="/upload">
+          <Upload />
+        </Route>
+        <Route path="/">
+          <ListingContainer />
+        </Route>
+      </Switch>
     </Router>
   );
 }
